@@ -3,9 +3,9 @@
 namespace app\modules\account;
 
 use Yii;
-use app\components\Module;
+use yii\base\Module as yiiModule;
 
-class AccountModule extends Module
+class Module extends yiiModule
 {
     public $controllerNamespace = 'app\modules\account\controllers';
 
