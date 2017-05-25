@@ -24,6 +24,16 @@ class m141022_115823_create_user_table extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
         ], $tableOptions);
+        
+        $this->insert("{{%user}}", [
+            'username' => 'akbar',
+            'password_hash' => Yii::$app->security->generatePasswordHash("123456"),
+            'email' => 'akbar.joody@gmail.com',
+            'status' => 1,
+            'auth_key' => Yii::$app->security->generateRandomString(),
+            'created_at' => time(),
+            'updated_at' => time(),
+        ]);
     }
 
     public function down()
