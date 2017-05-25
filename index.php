@@ -12,5 +12,5 @@
  * @author Amin
  */
 class index {
-    //put your code here
+    public $name="kir to konet";
 }
